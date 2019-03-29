@@ -1,0 +1,19 @@
+spring:
+  activiti:
+    check-process-definitions: false
+  datasource:
+    url: jdbc:mysql://localhost:3306/db_activiti?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 123456
+  resources:
+    static-locations: classpath:/public/
+  mvc:
+    static-path-pattern: /**
+server:
+  context-path: /
+#配置去掉activiti包中自带的安全验证，不然总是要输入用户名访问。可以自己定义验证信息
+#如果不想使用这个配置可以在数据库表中AC_ID_USER 中配置用户名和密码
+security:
+  basic:
+    enabled: false
