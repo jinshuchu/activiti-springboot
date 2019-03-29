@@ -6,9 +6,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 @RestController
-public class TestController {
+public class IndexController {
     @ResponseBody
-    @RequestMapping("/index")
+    @RequestMapping("/")
     public String getTestString(){
         return "hello world";
     }
